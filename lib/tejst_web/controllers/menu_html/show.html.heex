@@ -1,0 +1,16 @@
+<.header>
+  Menu <%= @menu.id %>
+  <:subtitle>This is a menu record from your database.</:subtitle>
+  <:actions>
+    <.link href={~p"/menus/#{@menu}/edit"}>
+      <.button>Edit menu</.button>
+    </.link>
+  </:actions>
+</.header>
+
+<.list>
+  <:item title="Name"><%= @menu.name %></:item>
+  <:item title="Recipe"><%= @menu.recipe_id %></:item>
+</.list>
+
+<.back navigate={~p"/menus"}>Back to menus</.back>

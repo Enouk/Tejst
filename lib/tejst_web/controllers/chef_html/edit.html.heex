@@ -1,0 +1,8 @@
+<.header>
+  Edit Chef <%= @chef.id %>
+  <:subtitle>Use this form to manage chef records in your database.</:subtitle>
+</.header>
+
+<.chef_form changeset={@changeset} action={~p"/chefs/#{@chef}"} />
+
+<.back navigate={~p"/chefs"}>Back to chefs</.back>

@@ -18,7 +18,23 @@ defmodule TejstWeb.Router do
     pipe_through :browser
 
     get "/", PageController, :home
+
+    get "/gallery", GalleryController, :index
+    get "/lobby", LobbyController, :index
+    get "/lobby/menus", LobbyController, :menus
+
+    resources "/chefs", ChefController
+    resources "/resturants", ResturantController
+    resources "/menus", MenuController
   end
+
+  # scope "/admin", TejstWeb do
+  #   pipe_through :browser
+
+  #   resources "/chefs", ChefController
+  #   resources "/resturants", ResturantController
+  #   resources "/menus", MenuController
+  # end
 
   # Other scopes may use custom stacks.
   # scope "/api", TejstWeb do

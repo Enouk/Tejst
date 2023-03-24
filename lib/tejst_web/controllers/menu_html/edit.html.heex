@@ -1,0 +1,8 @@
+<.header>
+  Edit Menu <%= @menu.id %>
+  <:subtitle>Use this form to manage menu records in your database.</:subtitle>
+</.header>
+
+<.menu_form changeset={@changeset} action={~p"/menus/#{@menu}"} />
+
+<.back navigate={~p"/menus"}>Back to menus</.back>

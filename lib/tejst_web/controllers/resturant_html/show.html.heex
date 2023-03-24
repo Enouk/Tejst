@@ -1,0 +1,14 @@
+<.header>
+  Resturant <%= @resturant.id %>
+  <:subtitle>This is a resturant record from your database.</:subtitle>
+  <:actions>
+    <.link href={~p"/resturants/#{@resturant}/edit"}>
+      <.button>Edit resturant</.button>
+    </.link>
+  </:actions>
+</.header>
+
+<.list>
+</.list>
+
+<.back navigate={~p"/resturants"}>Back to resturants</.back>

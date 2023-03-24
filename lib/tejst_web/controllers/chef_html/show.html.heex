@@ -1,0 +1,16 @@
+<.header>
+  Chef <%= @chef.id %>
+  <:subtitle>This is a chef record from your database.</:subtitle>
+  <:actions>
+    <.link href={~p"/chefs/#{@chef}/edit"}>
+      <.button>Edit chef</.button>
+    </.link>
+  </:actions>
+</.header>
+
+<.list>
+  <:item title="Username"><%= @chef.username %></:item>
+  <:item title="Name"><%= @chef.name %></:item>
+</.list>
+
+<.back navigate={~p"/chefs"}>Back to chefs</.back>
