@@ -21,7 +21,9 @@ defmodule TejstWeb.Router do
 
     get "/gallery", GalleryController, :index
     get "/lobby", LobbyController, :index
+    get "/lobby/kitchen/:kitchen_id", LobbyController, :kitchen
     get "/lobby/menus", LobbyController, :menus
+    get "/lobby/chefs", LobbyController, :chefs
 
     resources "/chefs", ChefController
     resources "/resturants", ResturantController
